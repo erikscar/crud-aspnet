@@ -20,6 +20,8 @@ namespace CRUD.Controllers
 
         public IActionResult Privacy()
         {
+            ViewData["Developer"] = "Erik Scarcela Araujo";
+            ViewData["Message"] = "CRUD Application with ASP.NET";
             return View();
         }
 
