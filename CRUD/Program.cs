@@ -1,3 +1,6 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using CRUD.Data;
 namespace CRUD
 {
     public class Program
@@ -5,6 +8,8 @@ namespace CRUD
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<CRUDContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("CRUDContext") ?? throw new InvalidOperationException("Connection string 'CRUDContext' not found.")));
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
