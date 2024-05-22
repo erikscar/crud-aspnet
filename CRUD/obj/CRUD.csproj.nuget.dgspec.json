@@ -1,21 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CRUD\\CRUD\\CRUD.csproj": {}
+    "C:\\crud-aspnet\\CRUD\\CRUD.csproj": {}
   },
   "projects": {
-    "D:\\CRUD\\CRUD\\CRUD.csproj": {
+    "C:\\crud-aspnet\\CRUD\\CRUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CRUD\\CRUD\\CRUD.csproj",
+        "projectUniqueName": "C:\\crud-aspnet\\CRUD\\CRUD.csproj",
         "projectName": "CRUD",
-        "projectPath": "D:\\CRUD\\CRUD\\CRUD.csproj",
+        "projectPath": "C:\\crud-aspnet\\CRUD\\CRUD.csproj",
         "packagesPath": "C:\\Users\\eriks\\.nuget\\packages\\",
-        "outputPath": "D:\\CRUD\\CRUD\\obj\\",
+        "outputPath": "C:\\crud-aspnet\\CRUD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\eriks\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -50,6 +49,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

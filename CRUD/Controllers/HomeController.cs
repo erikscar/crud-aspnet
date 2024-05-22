@@ -1,4 +1,4 @@
-using CRUD.Models;
+using CRUD.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
