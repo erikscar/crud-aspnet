@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ysWvnbhOChSHhRIxqlWAqkfKgUSDeYkcrAOd87mOwfY=",
+  "Hash": "y8OWFYosiLMioSXdXLzv+RiNMDPfLotINVIt3LsTcjI=",
   "Source": "CRUD",
   "BasePath": "_content/CRUD",
   "Mode": "Default",
@@ -718,6 +718,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Identity": "C:\\crud-aspnet\\CRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-vapor.css",
+      "SourceId": "CRUD",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\crud-aspnet\\CRUD\\wwwroot\\",
+      "BasePath": "_content/CRUD",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-vapor.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-vapor.css"
     },
     {
       "Identity": "C:\\crud-aspnet\\CRUD\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",

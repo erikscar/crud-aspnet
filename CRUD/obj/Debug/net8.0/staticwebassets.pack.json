@@ -117,6 +117,10 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
+      "Id": "C:\\crud-aspnet\\CRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-vapor.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-vapor.css"
+    },
+    {
       "Id": "C:\\crud-aspnet\\CRUD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
