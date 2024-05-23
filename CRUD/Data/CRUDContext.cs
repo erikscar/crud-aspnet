@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using CRUD.Models;
 
 namespace CRUD.Data
@@ -14,6 +10,8 @@ namespace CRUD.Data
         {
         }
 
-        public DbSet<CRUD.Models.Department> Department { get; set; } = default!;
+        public DbSet<Department> Department { get; set; } = default!;
+        public DbSet<Provider> Providers { get; set; }
+        public DbSet<ProvidersRecord> ProvidersRecord { get; set; }
     }
 }
