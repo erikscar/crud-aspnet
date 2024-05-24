@@ -11,7 +11,7 @@ namespace CRUD.Data
         }
 
         public DbSet<Department> Department { get; set; } = default!;
-        public DbSet<Provider> Providers { get; set; }
+        public DbSet<Provider> Provider { get; set; }
         public DbSet<ProvidersRecord> ProvidersRecord { get; set; }
     }
 }

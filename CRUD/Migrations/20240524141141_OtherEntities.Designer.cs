@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRUD.Migrations
 {
     [DbContext(typeof(CRUDContext))]
-    [Migration("20240523151439_OtherEntities")]
+    [Migration("20240524141141_OtherEntities")]
     partial class OtherEntities
     {
         /// <inheritdoc />
@@ -71,7 +71,7 @@ namespace CRUD.Migrations
 
                     b.HasIndex("DepartmentId");
 
-                    b.ToTable("Providers");
+                    b.ToTable("Provider");
                 });
 
             modelBuilder.Entity("CRUD.Models.ProvidersRecord", b =>

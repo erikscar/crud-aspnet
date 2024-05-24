@@ -68,7 +68,7 @@ namespace CRUD.Migrations
 
                     b.HasIndex("DepartmentId");
 
-                    b.ToTable("Providers");
+                    b.ToTable("Provider");
                 });
 
             modelBuilder.Entity("CRUD.Models.ProvidersRecord", b =>

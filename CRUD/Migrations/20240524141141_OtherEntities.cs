@@ -13,7 +13,7 @@ namespace CRUD.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Providers",
+                name: "Provider",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -28,9 +28,9 @@ namespace CRUD.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Providers", x => x.Id);
+                    table.PrimaryKey("PK_Provider", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Providers_Department_DepartmentId",
+                        name: "FK_Provider_Department_DepartmentId",
                         column: x => x.DepartmentId,
                         principalTable: "Department",
                         principalColumn: "Id",
@@ -53,17 +53,17 @@ namespace CRUD.Migrations
                 {
                     table.PrimaryKey("PK_ProvidersRecord", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ProvidersRecord_Providers_ProviderId",
+                        name: "FK_ProvidersRecord_Provider_ProviderId",
                         column: x => x.ProviderId,
-                        principalTable: "Providers",
+                        principalTable: "Provider",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Providers_DepartmentId",
-                table: "Providers",
+                name: "IX_Provider_DepartmentId",
+                table: "Provider",
                 column: "DepartmentId");
 
             migrationBuilder.CreateIndex(
@@ -79,7 +79,7 @@ namespace CRUD.Migrations
                 name: "ProvidersRecord");
 
             migrationBuilder.DropTable(
-                name: "Providers");
+                name: "Provider");
         }
     }
 }
