@@ -17,5 +17,11 @@ namespace CRUD.Services
             //Irá Buscar Todos os Providers
             return _context.Provider.ToList();
         }
+
+        public void Insert(Provider obj)
+        {
+            _context.Add(obj);
+            _context.SaveChanges();
+        }
     }
 }
