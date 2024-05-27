@@ -30,12 +30,12 @@ namespace CRUD.Data
             Department d3 = new Department(3, "Fashion");
             Department d4 = new Department(4, "Books");
 
-            Provider s1 = new Provider(1, "W Lenin", "wlenin@urss.com", new DateTime(1998, 4, 21), 1000.0, d1);
-            Provider s2 = new Provider(2, "K Marx", "kmarx@manifesto.com", new DateTime(1998, 4, 21), 1000.0, d2);
-            Provider s3 = new Provider(3, "C Marighela", "cmariga@luta.com", new DateTime(1998, 4, 21), 1000.0, d1);
+            Provider s1 = new Provider(1, "W Carlos", "wcarlos@gmail.com", new DateTime(1998, 4, 21), 1000.0, d1);
+            Provider s2 = new Provider(2, "Roberto Carlos", "roberto@gmail.com", new DateTime(1998, 4, 21), 1000.0, d2);
+            Provider s3 = new Provider(3, "C Silva", "silva@gmail.com", new DateTime(1998, 4, 21), 1000.0, d1);
             Provider s4 = new Provider(4, "L C Prestes", "lcprestes@pcb.com", new DateTime(1998, 4, 21), 1000.0, d4);
-            Provider s5 = new Provider(5, "Rosa Luxemburgo", "rosaluxemburgo@urss.com", new DateTime(1998, 4, 21), 1000.0, d3);
-            Provider s6 = new Provider(6, "Olga Benario", "obenario@revolucao.com", new DateTime(1998, 4, 21), 1000.0, d2);
+            Provider s5 = new Provider(5, "Rosa Luxemburgo", "rosaluxemburgo@gmail.com", new DateTime(1998, 4, 21), 1000.0, d3);
+            Provider s6 = new Provider(6, "Olga Benario", "obenario@gmail.com", new DateTime(1998, 4, 21), 1000.0, d2);
 
             ProvidersRecord r1 = new ProvidersRecord(1, new DateTime(2022, 08, 25), 11000.0, SaleStatus.Billed, s1);
             ProvidersRecord r2 = new ProvidersRecord(2, new DateTime(2022, 08, 26), 7000.0, SaleStatus.Canceled, s2);
