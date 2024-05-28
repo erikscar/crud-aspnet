@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using CRUD.Data;
 using CRUD.Services;
 namespace CRUD
@@ -17,6 +16,7 @@ namespace CRUD
             //Registrando o Serviço com Injeção de Dependência da Aplicação
             builder.Services.AddScoped<SeedingService>();
             builder.Services.AddScoped<ProviderService>();
+            builder.Services.AddScoped<DepartmentsService>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

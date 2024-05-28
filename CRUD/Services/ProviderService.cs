@@ -20,7 +20,6 @@ namespace CRUD.Services
 
         public void Insert(Provider obj)
         {
-            obj.Department = _context.Department.First();
             _context.Add(obj);
             _context.SaveChanges();
         }

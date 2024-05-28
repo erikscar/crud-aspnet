@@ -1,4 +1,4 @@
-﻿@model CRUD.Models.Provider
+﻿@model CRUD.Models.ViewModels.ProviderFormViewModel
 
 <h2>Create</h2>
 
@@ -9,21 +9,25 @@
         <!--A Ação Create não será a que foi criada no Controlador e sim uma função POST-->
         <form asp-action="Create">
             <div class="form-group">
-                <label asp-for="Name" class="form-label my-3"></label>
-                <input asp-for="Name" class="form-control"/>
+                <label asp-for="Provider.Name" class="form-label my-3"></label>
+                <input asp-for="Provider.Name" class="form-control"/>
             </div>
             <div class="form-group">
-                <label asp-for="Email" class="form-label my-3"></label>
-                <input asp-for="Email" class="form-control" />
+                <label asp-for="Provider.Email" class="form-label my-3"></label>
+                <input asp-for="Provider.Email" class="form-control" />
             </div>
             <div class="form-group">
-                <label asp-for="BirthDate" class="form-label my-3"></label>
-                <input asp-for="BirthDate" class="form-control" />
+                <label asp-for="Provider.BirthDate" class="form-label my-3"></label>
+                <input asp-for="Provider.BirthDate" class="form-control" />
             </div>
             <div class="form-group">
-                <label asp-for="BaseSalary" class="form-label my-3"></label>
-                <input asp-for="BaseSalary" class="form-control" />
+                <label asp-for="Provider.BaseSalary" class="form-label my-3"></label>
+                <input asp-for="Provider.BaseSalary" class="form-control" />
             </div>
+            <div class="form-group">
+                <label asp-for="Provider.DepartmentId" class="form-label my-3"></label>
+                <select asp-for="Provider.DepartmentId" asp-items="@(new SelectList(Model.Departments, "Id", "Name"))" class="form-select bg-primary"></select>
+            </div
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary mt-4"/>
             </div>
