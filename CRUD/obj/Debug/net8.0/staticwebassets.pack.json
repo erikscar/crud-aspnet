@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\crud-aspnet\\CRUD\\wwwroot\\home.png",
+      "PackagePath": "staticwebassets\\home.png"
+    },
+    {
       "Id": "D:\\crud-aspnet\\CRUD\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

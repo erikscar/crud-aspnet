@@ -23,5 +23,17 @@ namespace CRUD.Services
             _context.Add(obj);
             _context.SaveChanges();
         }
+
+        public Provider FindById(int id)
+        {
+            return _context.Provider.FirstOrDefault(obj => obj.Id == id);
+
+        }
+        public void Remove (int id )
+        {
+            var obj = _context.Provider.Find(id);
+            _context.Provider.Remove(obj);
+            _context.SaveChanges();
+        }
     }
 }

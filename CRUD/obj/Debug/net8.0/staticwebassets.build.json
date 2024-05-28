@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qHqKPJ4WXEDemF2taJh0WP7ndCJPZVUy3lwXaYHDezw=",
+  "Hash": "7wiW7cu+aPwkDJawSyb/zk+o1QttUxLPtcKYBJ5LIv0=",
   "Source": "CRUD",
   "BasePath": "_content/CRUD",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\crud-aspnet\\CRUD\\wwwroot\\home.png",
+      "SourceId": "CRUD",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\crud-aspnet\\CRUD\\wwwroot\\",
+      "BasePath": "_content/CRUD",
+      "RelativePath": "home.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\home.png"
     },
     {
       "Identity": "D:\\crud-aspnet\\CRUD\\wwwroot\\js\\site.js",
