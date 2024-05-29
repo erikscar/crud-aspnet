@@ -66,5 +66,24 @@ namespace CRUD.Controllers
             _providerService.Remove(id);
             return RedirectToAction(nameof(Index));
         }
+
+        public IActionResult Details(int? id)
+        {
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            //Tem que se utilizar o VAlue porque é um Nulable
+            var obj = _providerService.FindById(id.Value);
+
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            return View(obj);
+        }
     }
 }

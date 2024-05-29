@@ -1,5 +1,6 @@
 ﻿using CRUD.Data;
 using CRUD.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CRUD.Services
 {
@@ -26,7 +27,8 @@ namespace CRUD.Services
 
         public Provider FindById(int id)
         {
-            return _context.Provider.FirstOrDefault(obj => obj.Id == id);
+            //Utilizar o Include para Fazer um Join na Tabela Department, retornando assim o Provider e o Department
+            return _context.Provider.Include(obj => obj.Department).FirstOrDefault(obj => obj.Id == id);
 
         }
         public void Remove (int id )
