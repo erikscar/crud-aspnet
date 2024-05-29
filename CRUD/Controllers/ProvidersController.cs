@@ -1,6 +1,8 @@
 ﻿using CRUD.Models;
 using CRUD.Models.ViewModels;
 using CRUD.Services;
+using CRUD.Services.Exceptions;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CRUD.Controllers
@@ -84,6 +86,50 @@ namespace CRUD.Controllers
             }
 
             return View(obj);
+        }
+
+        public IActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var obj = _providerService.FindById(id.Value);
+
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            List<Department> departments = _departmentService.FindAll();
+            ProviderFormViewModel viewModel = new ProviderFormViewModel { Provider = obj, Departments = departments };
+
+            return View(viewModel);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(int id, Provider provider)
+        {
+            if (id != provider.Id)
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                _providerService.Update(provider);
+                return RedirectToAction(nameof(Index));
+            }
+            catch(NotFoundException)
+            {
+                return NotFound();
+            }
+            catch(DbConcurrencyException)
+            {
+                return BadRequest();
+            }
+
         }
     }
 }
