@@ -4,6 +4,7 @@ using CRUD.Services;
 using CRUD.Services.Exceptions;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace CRUD.Controllers
 {
@@ -48,7 +49,7 @@ namespace CRUD.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new {message = "ID Not Provided"});
             }
 
             //Tem que se utilizar o VAlue porque é um Nulable
@@ -56,7 +57,7 @@ namespace CRUD.Controllers
 
             if (obj == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "ID Not Found" });
             }
 
             return View(obj);
@@ -74,7 +75,7 @@ namespace CRUD.Controllers
 
             if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "ID Not Provided" });
             }
 
             //Tem que se utilizar o VAlue porque é um Nulable
@@ -82,7 +83,7 @@ namespace CRUD.Controllers
 
             if (obj == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "ID Not Found" });
             }
 
             return View(obj);
@@ -92,14 +93,14 @@ namespace CRUD.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "ID Not Provided" });
             }
 
             var obj = _providerService.FindById(id.Value);
 
             if (obj == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "ID Not Found" });
             }
 
             List<Department> departments = _departmentService.FindAll();
@@ -113,7 +114,7 @@ namespace CRUD.Controllers
         {
             if (id != provider.Id)
             {
-                return BadRequest();
+                return RedirectToAction(nameof(Error), new { message = "ID Missmatch" });
             }
 
             try
@@ -121,15 +122,21 @@ namespace CRUD.Controllers
                 _providerService.Update(provider);
                 return RedirectToAction(nameof(Index));
             }
-            catch(NotFoundException)
+            catch(ApplicationException e)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = e.Message });
             }
-            catch(DbConcurrencyException)
-            {
-                return BadRequest();
-            }
+        }
 
+        public IActionResult Error(string message)
+        {
+            var viewModel = new ErrorViewModel
+            {
+                Message = message,
+                RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
+            };
+
+            return View(viewModel);
         }
     }
 }
