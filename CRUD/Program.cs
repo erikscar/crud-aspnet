@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using CRUD.Data;
 using CRUD.Services;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 namespace CRUD
 {
     public class Program
@@ -31,6 +33,16 @@ namespace CRUD
                 app.UseHsts();
             }
             app.Services.CreateScope().ServiceProvider.GetRequiredService<SeedingService>().Seed();
+
+            var enUS = new CultureInfo("en-US");
+            var localizationOptions = new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture(enUS),
+                SupportedCultures = new List<CultureInfo> { enUS },
+                SupportedUICultures = new List<CultureInfo> { enUS }
+            };
+
+            app.UseRequestLocalization(localizationOptions);
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

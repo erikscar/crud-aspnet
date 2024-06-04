@@ -10,8 +10,8 @@ namespace CRUD.Models
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}")]
         [Display(Name = "Birth Date")]
-        [DataType(DataType.Date)]
         public DateTime BirthDate { get; set; }
 
         [Display(Name = "Base Salary")]

@@ -1,7 +1,10 @@
 ﻿using CRUD.Models;
 using CRUD.Models.ViewModels;
 using CRUD.Services;
+using CRUD.Services.Exceptions;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace CRUD.Controllers
 {
@@ -46,7 +49,7 @@ namespace CRUD.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new {message = "ID Not Provided"});
             }
 
             //Tem que se utilizar o VAlue porque é um Nulable
@@ -54,7 +57,7 @@ namespace CRUD.Controllers
 
             if (obj == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "ID Not Found" });
             }
 
             return View(obj);
@@ -65,6 +68,75 @@ namespace CRUD.Controllers
         {
             _providerService.Remove(id);
             return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult Details(int? id)
+        {
+
+            if (id == null)
+            {
+                return RedirectToAction(nameof(Error), new { message = "ID Not Provided" });
+            }
+
+            //Tem que se utilizar o VAlue porque é um Nulable
+            var obj = _providerService.FindById(id.Value);
+
+            if (obj == null)
+            {
+                return RedirectToAction(nameof(Error), new { message = "ID Not Found" });
+            }
+
+            return View(obj);
+        }
+
+        public IActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return RedirectToAction(nameof(Error), new { message = "ID Not Provided" });
+            }
+
+            var obj = _providerService.FindById(id.Value);
+
+            if (obj == null)
+            {
+                return RedirectToAction(nameof(Error), new { message = "ID Not Found" });
+            }
+
+            List<Department> departments = _departmentService.FindAll();
+            ProviderFormViewModel viewModel = new ProviderFormViewModel { Provider = obj, Departments = departments };
+
+            return View(viewModel);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(int id, Provider provider)
+        {
+            if (id != provider.Id)
+            {
+                return RedirectToAction(nameof(Error), new { message = "ID Missmatch" });
+            }
+
+            try
+            {
+                _providerService.Update(provider);
+                return RedirectToAction(nameof(Index));
+            }
+            catch(ApplicationException e)
+            {
+                return RedirectToAction(nameof(Error), new { message = e.Message });
+            }
+        }
+
+        public IActionResult Error(string message)
+        {
+            var viewModel = new ErrorViewModel
+            {
+                Message = message,
+                RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
+            };
+
+            return View(viewModel);
         }
     }
 }

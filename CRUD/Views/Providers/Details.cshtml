@@ -1,7 +1,5 @@
 ﻿@model CRUD.Models.Provider
 
-<h3>Are You Sure ? </h3>
-
 <div>
     <hr />
     <dl class="dl-horizontal">
@@ -29,12 +27,16 @@
         <dd>
             @Html.DisplayFor(model => model.BaseSalary)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Department)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Department.Name)
+        </dd>
     </dl>
+</div>
 
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-outline-danger" />
-        <a asp-action="Index" class="btn btn-outline-secondary mx-2">Back to List</a>
-    </form>
-    <hr />
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-info m-1">Edit</a>
+    <a asp-action="Index" class="btn btn-outline-secondary mx-2">Back To List</a>
 </div>
