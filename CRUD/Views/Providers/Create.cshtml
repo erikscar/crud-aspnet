@@ -8,6 +8,7 @@
     <div class="col-md-4">
         <!--A Ação Create não será a que foi criada no Controlador e sim uma função POST-->
         <form asp-action="Create">
+            <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Provider.Name" class="form-label my-3"></label>
                 <input asp-for="Provider.Name" class="form-control"/>
@@ -34,3 +35,9 @@
         </form>
     </div>
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderComponentAsync("_ValidationScriptsPartial");
+    }
+}
