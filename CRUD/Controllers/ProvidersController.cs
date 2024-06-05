@@ -40,6 +40,13 @@ namespace CRUD.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Provider provider)
         {
+            //Verificação Server-Side se os campos foram preenchidos corretamente
+            if (!ModelState.IsValid)
+            {
+                var departments = _departmentService.FindAll();
+                var viewModel = new ProviderFormViewModel { Departments = departments, Provider = provider };
+                return View(viewModel);
+            }
             //Método Criado na Aba Services para Inserir um novo Provider
             _providerService.Insert(provider);
             return RedirectToAction(nameof(Index));
@@ -112,6 +119,13 @@ namespace CRUD.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, Provider provider)
         {
+            //Verificação Server-Side se os campos foram preenchidos corretamente
+            if (!ModelState.IsValid)
+            {
+                var departments = _departmentService.FindAll();
+                var viewModel = new ProviderFormViewModel { Departments = departments, Provider = provider };
+                return View(viewModel);
+            }
             if (id != provider.Id)
             {
                 return RedirectToAction(nameof(Error), new { message = "ID Missmatch" });

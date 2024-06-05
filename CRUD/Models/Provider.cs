@@ -28,6 +28,8 @@ namespace CRUD.Models
 
 
         public Department Department { get; set; }
+
+        [Display(Name = "Department")]
         public int DepartmentId { get; set; }
         public ICollection<ProvidersRecord> Sales { get; set; } = new List<ProvidersRecord>();
 

@@ -10,19 +10,23 @@
             <input type="hidden" asp-for="Provider.Id" />
             <div class="form-group">
                 <label asp-for="Provider.Name" class="form-label my-3"></label>
-                <input asp-for="Provider.Name" class="form-control"/>
+                <input asp-for="Provider.Name" class="form-control mb-2" />
+                <span asp-validation-for="Provider.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Provider.Email" class="form-label my-3"></label>
-                <input asp-for="Provider.Email" class="form-control" />
+                <input asp-for="Provider.Email" class="form-control mb-2" />
+                <span asp-validation-for="Provider.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Provider.BirthDate" class="form-label my-3"></label>
-                <input asp-for="Provider.BirthDate" class="form-control" />
+                <input asp-for="Provider.BirthDate" class="form-control mb-2" />
+                <span asp-validation-for="Provider.BirthDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Provider.BaseSalary" class="form-label my-3"></label>
-                <input asp-for="Provider.BaseSalary" class="form-control" />
+                <input asp-for="Provider.BaseSalary" class="form-control mb-2" />
+                <span asp-validation-for="Provider.BaseSalary" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Provider.DepartmentId" class="form-label my-3"></label>
@@ -34,3 +38,10 @@
         </form>
     </div>
 </div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
