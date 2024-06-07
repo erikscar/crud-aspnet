@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\crud-aspnet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2BF1F6C-41AF-4231-A3E7-CDE600CA1BEA}|CRUD\\CRUD.csproj|c:\\crud-aspnet\\crud\\models\\provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2BF1F6C-41AF-4231-A3E7-CDE600CA1BEA}|CRUD\\CRUD.csproj|solutionrelative:crud\\models\\provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C2BF1F6C-41AF-4231-A3E7-CDE600CA1BEA}|CRUD\\CRUD.csproj|c:\\crud-aspnet\\crud\\controllers\\providerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2BF1F6C-41AF-4231-A3E7-CDE600CA1BEA}|CRUD\\CRUD.csproj|solutionrelative:crud\\controllers\\providerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2BF1F6C-41AF-4231-A3E7-CDE600CA1BEA}|CRUD\\CRUD.csproj|c:\\crud-aspnet\\crud\\services\\providerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2BF1F6C-41AF-4231-A3E7-CDE600CA1BEA}|CRUD\\CRUD.csproj|solutionrelative:crud\\services\\providerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2BF1F6C-41AF-4231-A3E7-CDE600CA1BEA}|CRUD\\CRUD.csproj|c:\\crud-aspnet\\crud\\models\\provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2BF1F6C-41AF-4231-A3E7-CDE600CA1BEA}|CRUD\\CRUD.csproj|solutionrelative:crud\\models\\provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2BF1F6C-41AF-4231-A3E7-CDE600CA1BEA}|CRUD\\CRUD.csproj|c:\\crud-aspnet\\crud\\views\\providers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C2BF1F6C-41AF-4231-A3E7-CDE600CA1BEA}|CRUD\\CRUD.csproj|c:\\crud-aspnet\\crud\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C2BF1F6C-41AF-4231-A3E7-CDE600CA1BEA}|CRUD\\CRUD.csproj|solutionrelative:crud\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2BF1F6C-41AF-4231-A3E7-CDE600CA1BEA}|CRUD\\CRUD.csproj|c:\\crud-aspnet\\crud\\services\\providerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2BF1F6C-41AF-4231-A3E7-CDE600CA1BEA}|CRUD\\CRUD.csproj|solutionrelative:crud\\services\\providerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2BF1F6C-41AF-4231-A3E7-CDE600CA1BEA}|CRUD\\CRUD.csproj|c:\\crud-aspnet\\crud\\views\\providers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -74,11 +74,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\crud-aspnet\\CRUD\\Views\\Providers\\Details.cshtml",
               "RelativeDocumentMoniker": "CRUD\\Views\\Providers\\Details.cshtml",
@@ -86,12 +86,11 @@
               "RelativeToolTip": "CRUD\\Views\\Providers\\Details.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-05T15:06:32.223Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T15:06:32.223Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\crud-aspnet\\CRUD\\Views\\Providers\\Edit.cshtml",
               "RelativeDocumentMoniker": "CRUD\\Views\\Providers\\Edit.cshtml",
@@ -99,12 +98,11 @@
               "RelativeToolTip": "CRUD\\Views\\Providers\\Edit.cshtml",
               "ViewState": "AQIAABIAAAAAAAAAAAAAAB8AAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-05T15:01:23.807Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T15:01:23.807Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Department.cs",
               "DocumentMoniker": "C:\\crud-aspnet\\CRUD\\Models\\Department.cs",
               "RelativeDocumentMoniker": "CRUD\\Models\\Department.cs",
@@ -112,12 +110,11 @@
               "RelativeToolTip": "CRUD\\Models\\Department.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAywAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T14:57:00.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T14:57:00.245Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\crud-aspnet\\CRUD\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "CRUD\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -129,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\crud-aspnet\\CRUD\\appsettings.json",
               "RelativeDocumentMoniker": "CRUD\\appsettings.json",
@@ -137,8 +134,7 @@
               "RelativeToolTip": "CRUD\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-04T15:05:07.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-04T15:05:07.237Z"
             },
             {
               "$type": "Document",
@@ -166,13 +162,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Provider.cs",
               "DocumentMoniker": "C:\\crud-aspnet\\CRUD\\Models\\Provider.cs",
               "RelativeDocumentMoniker": "CRUD\\Models\\Provider.cs",
               "ToolTip": "C:\\crud-aspnet\\CRUD\\Models\\Provider.cs",
               "RelativeToolTip": "CRUD\\Models\\Provider.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB8AAAAmAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAQwB8AAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-27T20:30:57.235Z",
               "EditorCaption": ""
@@ -191,13 +187,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ProvidersController.cs",
               "DocumentMoniker": "C:\\crud-aspnet\\CRUD\\Controllers\\ProvidersController.cs",
               "RelativeDocumentMoniker": "CRUD\\Controllers\\ProvidersController.cs",
               "ToolTip": "C:\\crud-aspnet\\CRUD\\Controllers\\ProvidersController.cs",
               "RelativeToolTip": "CRUD\\Controllers\\ProvidersController.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAIwDAAAAANAAAA",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAYwIAAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-27T20:05:27.397Z",
               "EditorCaption": ""
@@ -216,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\crud-aspnet\\CRUD\\Views\\Providers\\Create.cshtml",
               "RelativeDocumentMoniker": "CRUD\\Views\\Providers\\Create.cshtml",
@@ -224,8 +220,7 @@
               "RelativeToolTip": "CRUD\\Views\\Providers\\Create.cshtml",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAB8AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-28T15:07:14.633Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T15:07:14.633Z"
             },
             {
               "$type": "Document",
@@ -265,15 +260,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "ProviderService.cs",
               "DocumentMoniker": "C:\\crud-aspnet\\CRUD\\Services\\ProviderService.cs",
               "RelativeDocumentMoniker": "CRUD\\Services\\ProviderService.cs",
               "ToolTip": "C:\\crud-aspnet\\CRUD\\Services\\ProviderService.cs",
               "RelativeToolTip": "CRUD\\Services\\ProviderService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAqAAAA",
+              "ViewState": "AQIAADEAAAAAAAAAAAAcwCIAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T20:06:15.668Z"
+              "WhenOpened": "2024-05-27T20:06:15.668Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -41,7 +41,7 @@ namespace CRUD.Controllers
         public IActionResult Create(Provider provider)
         {
             //Verificação Server-Side se os campos foram preenchidos corretamente
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var departments = _departmentService.FindAll();
                 var viewModel = new ProviderFormViewModel { Departments = departments, Provider = provider };
@@ -120,7 +120,7 @@ namespace CRUD.Controllers
         public IActionResult Edit(int id, Provider provider)
         {
             //Verificação Server-Side se os campos foram preenchidos corretamente
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var departments = _departmentService.FindAll();
                 var viewModel = new ProviderFormViewModel { Departments = departments, Provider = provider };
