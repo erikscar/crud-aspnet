@@ -19,6 +19,7 @@ namespace CRUD
             builder.Services.AddScoped<SeedingService>();
             builder.Services.AddScoped<ProviderService>();
             builder.Services.AddScoped<DepartmentsService>();
+            builder.Services.AddScoped<ProvidersRecordService>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
