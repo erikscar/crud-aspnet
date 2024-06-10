@@ -19,16 +19,16 @@ namespace CRUD.Controllers
             _providerService = providerService;
             _departmentService = departmentService; 
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var list = _providerService.FindAll();
+            var list = await _providerService.FindAllAsync();
             //Passando todos os Providers para a View
             return View(list);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            var departments = _departmentService.FindAll();
+            var departments = await _departmentService.FindAllAsync();
             var viewModel = new ProviderFormViewModel { Departments = departments };
             //Retornando apenas a View Create
             //Agora a view vai receber os departamentos buscados 
@@ -38,21 +38,21 @@ namespace CRUD.Controllers
         [HttpPost]
         //Maior Segurança
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Provider provider)
+        public async Task<IActionResult> Create(Provider provider)
         {
             //Verificação Server-Side se os campos foram preenchidos corretamente
             if (ModelState.IsValid)
             {
-                var departments = _departmentService.FindAll();
+                var departments = await _departmentService.FindAllAsync();
                 var viewModel = new ProviderFormViewModel { Departments = departments, Provider = provider };
                 return View(viewModel);
             }
             //Método Criado na Aba Services para Inserir um novo Provider
-            _providerService.Insert(provider);
+            await _providerService.InsertAsync(provider);
             return RedirectToAction(nameof(Index));
         }
 
-        public IActionResult Delete (int? id)
+        public async Task<IActionResult> Delete (int? id)
         {
             if (id == null)
             {
@@ -60,7 +60,7 @@ namespace CRUD.Controllers
             }
 
             //Tem que se utilizar o VAlue porque é um Nulable
-            var obj = _providerService.FindById(id.Value);
+            var obj = await _providerService.FindByIdAsync(id.Value);
 
             if (obj == null)
             {
@@ -71,13 +71,21 @@ namespace CRUD.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            _providerService.Remove(id);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                await _providerService.RemoveAsync(id);
+                return RedirectToAction(nameof(Index));
+            }
+            //Caso ocorra essa exceção redirecionar para a página
+            catch(IntegrityException e)
+            {
+                return RedirectToAction(nameof(Error), new { message = e.Message });
+            }
         }
 
-        public IActionResult Details(int? id)
+        public async Task<IActionResult> Details(int? id)
         {
 
             if (id == null)
@@ -86,7 +94,7 @@ namespace CRUD.Controllers
             }
 
             //Tem que se utilizar o VAlue porque é um Nulable
-            var obj = _providerService.FindById(id.Value);
+            var obj = await _providerService.FindByIdAsync(id.Value);
 
             if (obj == null)
             {
@@ -96,33 +104,33 @@ namespace CRUD.Controllers
             return View(obj);
         }
 
-        public IActionResult Edit(int? id)
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return RedirectToAction(nameof(Error), new { message = "ID Not Provided" });
             }
 
-            var obj = _providerService.FindById(id.Value);
+            var obj = await _providerService.FindByIdAsync(id.Value);
 
             if (obj == null)
             {
                 return RedirectToAction(nameof(Error), new { message = "ID Not Found" });
             }
 
-            List<Department> departments = _departmentService.FindAll();
+            List<Department> departments = await _departmentService.FindAllAsync();
             ProviderFormViewModel viewModel = new ProviderFormViewModel { Provider = obj, Departments = departments };
 
             return View(viewModel);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, Provider provider)
+        public async Task<IActionResult> Edit(int id, Provider provider)
         {
             //Verificação Server-Side se os campos foram preenchidos corretamente
             if (ModelState.IsValid)
             {
-                var departments = _departmentService.FindAll();
+                var departments = await _departmentService.FindAllAsync();
                 var viewModel = new ProviderFormViewModel { Departments = departments, Provider = provider };
                 return View(viewModel);
             }
@@ -133,7 +141,7 @@ namespace CRUD.Controllers
 
             try
             {
-                _providerService.Update(provider);
+                await _providerService.UpdateAsync(provider);
                 return RedirectToAction(nameof(Index));
             }
             catch(ApplicationException e)

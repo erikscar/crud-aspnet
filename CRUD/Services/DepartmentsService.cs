@@ -1,5 +1,6 @@
 ﻿using CRUD.Data;
 using CRUD.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CRUD.Services
 {
@@ -13,10 +14,10 @@ namespace CRUD.Services
             _context = context;
         }
 
-        public List<Department> FindAll()
+        public async Task <List<Department>> FindAllAsync()
         {
             //return _context.Department.ToList(); Podemos fazer dessa forma ou 
-            return _context.Department.OrderBy(x => x.Name).ToList(); //Ou Buscar todos os departamentos ORDENADOS PELO NOME
+            return await _context.Department.OrderBy(x => x.Name).ToListAsync(); //Ou Buscar todos os departamentos ORDENADOS PELO NOME
         }
     }
 }
