@@ -17,6 +17,7 @@ namespace CRUD.Models
 
         [Required(ErrorMessage = "{0} Required")]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}")]
+        [DataType(DataType.Date)]
         [Display(Name = "Birth Date")]
         public DateTime BirthDate { get; set; }
 

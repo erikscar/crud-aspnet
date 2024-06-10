@@ -17,79 +17,79 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CRUD
 build_property.RootNamespace = CRUD
-build_property.ProjectDir = C:\crud-aspnet\CRUD\
+build_property.ProjectDir = D:\crud-aspnet\CRUD\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\crud-aspnet\CRUD
+build_property.MSBuildProjectDirectory = D:\crud-aspnet\CRUD
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/crud-aspnet/CRUD/Views/Departments/Create.cshtml]
+[D:/crud-aspnet/CRUD/Views/Departments/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/crud-aspnet/CRUD/Views/Departments/Delete.cshtml]
+[D:/crud-aspnet/CRUD/Views/Departments/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/crud-aspnet/CRUD/Views/Departments/Details.cshtml]
+[D:/crud-aspnet/CRUD/Views/Departments/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/crud-aspnet/CRUD/Views/Departments/Edit.cshtml]
+[D:/crud-aspnet/CRUD/Views/Departments/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/crud-aspnet/CRUD/Views/Departments/Index.cshtml]
+[D:/crud-aspnet/CRUD/Views/Departments/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/crud-aspnet/CRUD/Views/Home/Index.cshtml]
+[D:/crud-aspnet/CRUD/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/crud-aspnet/CRUD/Views/Home/Privacy.cshtml]
+[D:/crud-aspnet/CRUD/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/crud-aspnet/CRUD/Views/Providers/Create.cshtml]
+[D:/crud-aspnet/CRUD/Views/Providers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/crud-aspnet/CRUD/Views/Providers/Delete.cshtml]
+[D:/crud-aspnet/CRUD/Views/Providers/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/crud-aspnet/CRUD/Views/Providers/Details.cshtml]
+[D:/crud-aspnet/CRUD/Views/Providers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/crud-aspnet/CRUD/Views/Providers/Edit.cshtml]
+[D:/crud-aspnet/CRUD/Views/Providers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/crud-aspnet/CRUD/Views/Providers/Index.cshtml]
+[D:/crud-aspnet/CRUD/Views/Providers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/crud-aspnet/CRUD/Views/Shared/Error.cshtml]
+[D:/crud-aspnet/CRUD/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/crud-aspnet/CRUD/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/crud-aspnet/CRUD/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/crud-aspnet/CRUD/Views/_ViewImports.cshtml]
+[D:/crud-aspnet/CRUD/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/crud-aspnet/CRUD/Views/_ViewStart.cshtml]
+[D:/crud-aspnet/CRUD/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/crud-aspnet/CRUD/Views/Shared/_Layout.cshtml]
+[D:/crud-aspnet/CRUD/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-layzia8bah
