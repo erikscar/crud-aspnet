@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7wiW7cu+aPwkDJawSyb/zk+o1QttUxLPtcKYBJ5LIv0=",
+  "Hash": "fcqtP3s0MY+E8wCjFiRxqO7bFfUnUbtM7m4epNsP5sM=",
   "Source": "CRUD",
   "BasePath": "_content/CRUD",
   "Mode": "Default",
@@ -74,12 +74,12 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\crud-aspnet\\CRUD\\wwwroot\\favicon.ico",
+      "Identity": "D:\\crud-aspnet\\CRUD\\wwwroot\\favicon.png",
       "SourceId": "CRUD",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\crud-aspnet\\CRUD\\wwwroot\\",
       "BasePath": "_content/CRUD",
-      "RelativePath": "favicon.ico",
+      "RelativePath": "favicon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -90,7 +90,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
+      "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
       "Identity": "D:\\crud-aspnet\\CRUD\\wwwroot\\home.png",

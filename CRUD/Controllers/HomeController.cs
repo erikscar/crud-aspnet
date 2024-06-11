@@ -18,13 +18,6 @@ namespace CRUD.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            ViewData["Developer"] = "Erik Scarcela Araujo";
-            ViewData["Message"] = "CRUD Application with ASP.NET";
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
