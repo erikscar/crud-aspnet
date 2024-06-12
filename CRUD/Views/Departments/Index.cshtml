@@ -1,35 +1,19 @@
 ﻿@model IEnumerable<CRUD.Models.Department>
 
-@{
-    ViewData["Title"] = "Index";
-}
+<h1 class="text-center">Departments</h1>
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
+<p class="text-center my-4">
+    <a asp-action="Create" class="btn btn-success fs-4 fw-bolder w-50">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+<div class="container d-flex flex-wrap justify-content-center mx-auto">
+    @foreach (var item in Model) {
+     <div class="card text-center m-3 border-primary" style="width: 20rem;">
+            <img src="https://www.acate.com.br/wp-content/uploads/2023/03/design-sem-nome-2023-03-09t171243104-600x380.png" class="card-img-top p-3" style="height: 16rem;" alt=@Html.DisplayFor(modelItem => item.Name)>
+         <h3 class="card-title my-2">@Html.DisplayFor(modelItem => item.Name)</h3>
+         <div class="my-2">
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-info my-2 w-75">Edit</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger my-2 w-75">Delete</a>
+         </div>
+     </div>
 }
-    </tbody>
-</table>
+</div>
