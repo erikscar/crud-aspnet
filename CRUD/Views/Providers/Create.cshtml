@@ -11,12 +11,12 @@
             @* <div asp-validation-summary="All" class="text-danger"></div> PARA APARECER OS ERROS EM FORMA DE LISTA *@
             <div class="form-group">
                 <label asp-for="Provider.Name" class="form-label my-3"></label>
-                <input asp-for="Provider.Name" class="form-control mb-2"/>
+                <input asp-for="Provider.Name" class="form-control mb-2 fs-5"/>
                 <span asp-validation-for="Provider.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Provider.Email" class="form-label my-3"></label>
-                <input asp-for="Provider.Email" class="form-control mb-2" />
+                <input asp-for="Provider.Email" class="form-control mb-2 fs-5" />
                 <span asp-validation-for="Provider.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -26,12 +26,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="Provider.BaseSalary" class="form-label my-3"></label>
-                <input asp-for="Provider.BaseSalary" class="form-control mb-2" />
+                <input asp-for="Provider.BaseSalary" class="form-control mb-2 fs-5" />
                 <span asp-validation-for="Provider.BaseSalary" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Provider.DepartmentId" class="form-label my-3"></label>
-                <select asp-for="Provider.DepartmentId" asp-items="@(new SelectList(Model.Departments, "Id", "Name"))" class="form-select bg-primary"></select>
+                <select asp-for="Provider.DepartmentId" asp-items="@(new SelectList(Model.Departments, "Id", "Name"))" class="form-select bg-primary fs-5"></select>
             </div
             <p class="text-center">
                 <input type="submit" value="Create" class="btn btn-outline-success w-100 mt-4 fs-5"/>
