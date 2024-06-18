@@ -25,10 +25,10 @@ namespace CRUD.Data
                 return; //Banco de Dados Já Populado
             }
 
-            Department d1 = new Department(1, "Computers");
-            Department d2 = new Department(2, "Electronics");
-            Department d3 = new Department(3, "Fashion");
-            Department d4 = new Department(4, "Books");
+            Department d1 = new Department(1, "Computers", "https://microexato.com.br/wp-content/uploads/2018/10/Por-que-comprar-computadores-usados-para-empresa.png");
+            Department d2 = new Department(2, "Electronics", "https://www.acate.com.br/wp-content/uploads/2023/03/design-sem-nome-2023-03-09t171243104-600x380.png");
+            Department d3 = new Department(3, "Fashion", "https://goop-img.com/wp-content/uploads/2016/07/MAIN-Goop_TCS_Closet_Proofs-25.jpg");
+            Department d4 = new Department(4, "Books", "https://www.rbsdirect.com.br/filestore/4/5/7/3/2/8/4_607b3d2f9db96c0/4823754_d508394098f8f23.jpg?w=700");
 
             Provider s1 = new Provider(1, "W Carlos", "wcarlos@gmail.com", new DateTime(1998, 4, 21), 1000.0, d1);
             Provider s2 = new Provider(2, "Roberto Carlos", "roberto@gmail.com", new DateTime(1998, 4, 21), 1000.0, d2);
