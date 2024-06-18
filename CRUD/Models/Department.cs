@@ -1,11 +1,18 @@
-﻿namespace CRUD.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CRUD.Models
 {
     public class Department
     {
         public int Id { get; set; }
+        [Required(ErrorMessage = "{0} is Required")]
         public string Name { get; set; }
-        //Associação do Departamento com o Fornecedor
+
+        [Display(Name = "Image Url")]
+        [DataType(DataType.ImageUrl)]
+        [Url(ErrorMessage = "Please Insert a valid URL ")]
         public string ImageUrl { get; set; }
+        //Associação do Departamento com o Fornecedor
         public ICollection<Provider> Providers { get; set; } = new List<Provider>();
 
         public Department()

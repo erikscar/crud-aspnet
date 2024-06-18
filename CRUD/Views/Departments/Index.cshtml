@@ -5,9 +5,9 @@
 <p class="text-center my-4">
     <a asp-action="Create" class="btn btn-outline-success fs-4 fw-bolder w-50">Create New</a>
 </p>
-<div class="container d-flex flex-wrap justify-content-center mx-auto">
+<div class="container-fluid d-flex flex-wrap justify-content-center mx-auto">
     @foreach (var item in Model) {
-     <div class="card text-center m-3 border-primary" style="width: 20rem;">
+     <div class="card text-center m-2 border-primary" style="width: 20rem;">
             <img src=@Html.DisplayFor(modelItem => item.ImageUrl) class="card-img-top p-3" style="height: 16rem;" alt=@Html.DisplayFor(modelItem => item.Name)>
          <h3 class="card-title my-2">@Html.DisplayFor(modelItem => item.Name)</h3>
          <div class="my-2">
